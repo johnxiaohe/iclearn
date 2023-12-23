@@ -3,15 +3,6 @@
     "icpblog_backend": {
       "main": "src/icpblog_backend/main.mo",
       "type": "motoko"
-    },
-    "icpblog_frontend": {
-      "dependencies": [
-        "icpblog_backend"
-      ],
-      "source": [
-        "src/icpblog_frontend/assets"
-      ],
-      "type": "assets"
     }
   },
   "defaults": {

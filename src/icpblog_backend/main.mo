@@ -3,6 +3,11 @@ import Text "mo:base/Text";
 import Int "mo:base/Int";
 import Array "mo:base/Array";
 actor {
+
+  // memory var
+  stable var count : Nat = 0;
+
+  // first charpter
   func fib(n : Nat) : Nat{
       if(n <= 1){
         1
@@ -15,6 +20,7 @@ actor {
     return "fib(" # Nat.toText(n) # ") =" # Nat.toText(fib(n))
   };
 
+  // second charpter
   /* quick sort by double point */
   public query func qsort(arr: [Int]): async [Int]{
     let size = Array.size(arr);
@@ -49,6 +55,33 @@ actor {
     };
     arr[left] := pivot;
     return left;
+  };
+
+  // three charpter
+  type HttpRequest = {
+    body: Blob;
+    headers: [HeaderField];
+    method: Text;
+    url: Text;
+  };
+  type HttpResponse = {
+    body: Blob;
+    headers: [HeaderField];
+    status_code: Nat16;
+  };
+  type HeaderField = (Text, Text);
+  public query func http_request(arg : HttpRequest): async HttpResponse {
+      return {
+        body = Text.encodeUtf8(Nat.toText(count));
+        headers = [];
+        status_code = 200;
+      };
+  };
+  public func increment() : async (){
+    count+=1;
+  };
+  public query func get() : async Nat{
+    return count;
   };
 
   public query func greet(name : Text) : async Text {
