@@ -1,4 +1,6 @@
 // import Array "mo:base/Array";
+
+/* quick sort by double point */
 module{
     public func quickSort(arr: [var Int], low: Nat, high: Nat){
         if (low < high){

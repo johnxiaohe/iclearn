@@ -14,7 +14,6 @@ actor {
   };
 
   // second charpter
-  /* quick sort by double point */
   public query func qsort(arr: [Int]): async [Int]{
     let size = Array.size(arr);
     if (size == 0){
@@ -26,9 +25,7 @@ actor {
   };
 
   // three charpter
-    // memory var
   stable var count : Nat = 0;
-
   public query func http_request(arg : Htm.HttpRequest): async Htm.HttpResponse {
       return {
         body = Text.encodeUtf8(Nat.toText(count));
@@ -42,5 +39,8 @@ actor {
   public query func get() : async Nat{
     return count;
   };
+
+  // four charpter
+
   
 };

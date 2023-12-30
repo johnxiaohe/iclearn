@@ -3,6 +3,14 @@
     "icpblog_backend": {
       "main": "src/icpblog_backend/main.mo",
       "type": "motoko"
+    },
+    "microblog": {
+      "main": "src/icpblog_backend/microBlog.mo",
+      "type": "motoko"
+    },
+    "microblog2": {
+      "main": "src/icpblog_backend/microBlog.mo",
+      "type": "motoko"
     }
   },
   "defaults": {
